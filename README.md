@@ -1,5 +1,5 @@
 ### Original
-https://michieldb.nl/other/cursors/
+http://www.michieldb.nl/other/cursors/
 
 ##### Build script from here
 https://github.com/keeferrourke/capitaine-cursors
