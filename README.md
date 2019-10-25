@@ -20,5 +20,5 @@ Copy `posy-default` folder to `~/.icons`
 
 ---
 
-#### You can preview some of the cursors in action here
+#### After installation you can preview some of the cursors in action here
 https://codepen.io/chriscoyier/pen/uCwfB
