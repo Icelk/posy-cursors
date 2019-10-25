@@ -12,5 +12,8 @@ https://github.com/keeferrourke/capitaine-cursors
  cd posy-cursors
  makepkg -si
 ```
-<sub><sup>~~yay -S posy-cursors~~</sup></sub>
+<sub><sup>yay -S posy-cursors</sup></sub>
 
+### Manual:
+
+Copy `posy-default` folder to `~/.icons`

@@ -10,7 +10,7 @@ function create {
 	# generate cursors
 	if [[ "$THEME" =~ White$ ]]; then
 		BUILD="$SRC"/../dist-white
-	else BUILD="$SRC"/../dist
+	else BUILD="$SRC"/../posy-default
 	fi
 	OUTPUT="$BUILD"/cursors
 	ALIASES="$SRC"/cursorList
@@ -60,7 +60,7 @@ function create {
 
 # generate pixmaps from svg source
 SRC=$PWD/src
-THEME="Posy"
+THEME="Posy Default"
 
 create svg
 
