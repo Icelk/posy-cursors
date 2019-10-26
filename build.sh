@@ -15,7 +15,6 @@ function buildWhite {
 		mkdir "$OUTPUT"
 	fi
 
-	echo -ne "Generating cursor theme...\\r"
 	for CUR in config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
@@ -23,12 +22,10 @@ function buildWhite {
 		
 		xcursorgen "$CUR" "$OUTPUT/$BASENAME"
 	done
-	echo -e "Generating cursor theme... DONE"
 
 	cd "$OUTPUT"	
 
 	#generate aliases
-	echo -ne "Generating shortcuts...\\r"
 	while read ALIAS; do
 		FROM="${ALIAS#* }"
 		TO="${ALIAS% *}"
@@ -38,17 +35,14 @@ function buildWhite {
 		fi
 		ln -sr "$FROM" "$TO"
 	done < "$ALIASES"
-	echo -e "Generating shortcuts... DONE"
 
 	cd "$PWD"
 
-	echo -ne "Generating Theme Index...\\r"
 	INDEX="$OUTPUT/../index.theme"
 	if [ ! -e "$OUTPUT/../$INDEX" ]; then
 		touch "$INDEX"
 		echo -e "[Icon Theme]\nName=$themeWhite\n" > "$INDEX"
 	fi
-	echo -e "Generating Theme Index... DONE"
 }
 
 function buildBlack {
@@ -66,7 +60,6 @@ function buildBlack {
 		mkdir "$OUTPUT"
 	fi
 
-	echo -ne "Generating cursor theme...\\r"
 	for CUR in config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
@@ -74,12 +67,10 @@ function buildBlack {
 		
 		xcursorgen "$CUR" "$OUTPUT/$BASENAME"
 	done
-	echo -e "Generating cursor theme... DONE"
-
+	
 	cd "$OUTPUT"	
 
 	#generate aliases
-	echo -ne "Generating shortcuts...\\r"
 	while read ALIAS; do
 		FROM="${ALIAS#* }"
 		TO="${ALIAS% *}"
@@ -89,17 +80,14 @@ function buildBlack {
 		fi
 		ln -sr "$FROM" "$TO"
 	done < "$ALIASES"
-	echo -e "Generating shortcuts... DONE"
 
 	cd "$PWD"
 
-	echo -ne "Generating Theme Index...\\r"
 	INDEX="$OUTPUT/../index.theme"
 	if [ ! -e "$OUTPUT/../$INDEX" ]; then
 		touch "$INDEX"
 		echo -e "[Icon Theme]\nName=$themeBlack\n" > "$INDEX"
 	fi
-	echo -e "Generating Theme Index... DONE"
 }
 
 function buildBlackTiny {
@@ -117,7 +105,6 @@ function buildBlackTiny {
 		mkdir "$OUTPUT"
 	fi
 
-	echo -ne "Generating cursor theme...\\r"
 	for CUR in config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
@@ -125,12 +112,10 @@ function buildBlackTiny {
 		
 		xcursorgen "$CUR" "$OUTPUT/$BASENAME"
 	done
-	echo -e "Generating cursor theme... DONE"
 
 	cd "$OUTPUT"	
 
 	#generate aliases
-	echo -ne "Generating shortcuts...\\r"
 	while read ALIAS; do
 		FROM="${ALIAS#* }"
 		TO="${ALIAS% *}"
@@ -140,17 +125,14 @@ function buildBlackTiny {
 		fi
 		ln -sr "$FROM" "$TO"
 	done < "$ALIASES"
-	echo -e "Generating shortcuts... DONE"
 
 	cd "$PWD"
 
-	echo -ne "Generating Theme Index...\\r"
 	INDEX="$OUTPUT/../index.theme"
 	if [ ! -e "$OUTPUT/../$INDEX" ]; then
 		touch "$INDEX"
 		echo -e "[Icon Theme]\nName=$themeBlackTiny\n" > "$INDEX"
 	fi
-	echo -e "Generating Theme Index... DONE"
 }
 
 function buildWhiteTiny {
@@ -168,7 +150,6 @@ function buildWhiteTiny {
 		mkdir "$OUTPUT"
 	fi
 
-	echo -ne "Generating cursor theme...\\r"
 	for CUR in config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
@@ -176,12 +157,10 @@ function buildWhiteTiny {
 		
 		xcursorgen "$CUR" "$OUTPUT/$BASENAME"
 	done
-	echo -e "Generating cursor theme... DONE"
 
 	cd "$OUTPUT"	
 
 	#generate aliases
-	echo -ne "Generating shortcuts...\\r"
 	while read ALIAS; do
 		FROM="${ALIAS#* }"
 		TO="${ALIAS% *}"
@@ -191,17 +170,14 @@ function buildWhiteTiny {
 		fi
 		ln -sr "$FROM" "$TO"
 	done < "$ALIASES"
-	echo -e "Generating shortcuts... DONE"
 
 	cd "$PWD"
 
-	echo -ne "Generating Theme Index...\\r"
 	INDEX="$OUTPUT/../index.theme"
 	if [ ! -e "$OUTPUT/../$INDEX" ]; then
 		touch "$INDEX"
 		echo -e "[Icon Theme]\nName=$themeWhiteTiny\n" > "$INDEX"
 	fi
-	echo -e "Generating Theme Index... DONE"
 }
 
 sourceWhite=$PWD/White
@@ -216,7 +192,19 @@ themeWhiteTiny="Posy White Tiny"
 sourceBlackTiny=$PWD/BlackTiny
 themeBlackTiny="Posy Black Tiny"
 
+RED="\033[0;31m"
+ORANGE="\033[0;33m"
+YELLOW="\033[1;33m"
+GREEN="\033[0;32m"
+BLUE="\033[0;34m"
+PURPLE="\033[0;35m"
+COLORLESS="\033[0m"
+
+echo -e "${RED}Gener${COLORLESS}${ORANGE}ating${COLORLESS} ${YELLOW}cur${COLORLESS}${GREEN}sor${COLORLESS} ${BLUE}the${COLORLESS}${PURPLE}mes ...${COLORLESS}"
+
 buildWhite
 buildBlack
 buildWhiteTiny
 buildBlackTiny
+
+echo -e "${RED}F${COLORLESS}${ORANGE}I${COLORLESS}${YELLOW}N${COLORLESS}${GREEN}I${COLORLESS}${BLUE}S${COLORLESS}${PURPLE}H${COLORLESS}"
