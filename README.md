@@ -16,7 +16,7 @@ https://github.com/keeferrourke/capitaine-cursors
 
 ### Manual
 
-Copy `posy-default` folder to `~/.icons`
+Copy `posy-*` folders to `~/.icons`
 
 ---
 
