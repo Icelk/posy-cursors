@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function ProgressBar_RED {
 # Process data
     let _progress_R=(${1}*100/${2}*100)/100

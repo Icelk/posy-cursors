@@ -16,8 +16,7 @@ PURPLE="\033[0;35m"
 COLORLESS="\033[0m"
 
 source progressBars.sh
-
-source builds.sh
+source buildFunctions.sh
 
 sourceWhite=$PWD/White
 themeWhite="Posy White"
