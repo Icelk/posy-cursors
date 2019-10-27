@@ -21,6 +21,8 @@ https://github.com/keeferrourke/capitaine-cursors
 
 ### Manual
 
+Run `bash create.sh`
+
 Copy `posy-*` folders to `~/.icons`
 
 ---
