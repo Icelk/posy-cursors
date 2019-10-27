@@ -1,6 +1,6 @@
 ## Preview
 
-![Preview](https://cloud.auteiy.me/apps/files_sharing/publicpreview/2NonrWGYwDD94TW?x=1920&y=624&a=true&file=PreviewCursors.png&scalingup=0)
+![Preview](https://cloud.auteiy.me/s/nqsGWPnKxT6KSEB/preview)
 
 
 ### Original
