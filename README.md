@@ -32,11 +32,24 @@ You'll need:
 
 Run `bash Main/create.sh`
 
-Copy `Prebuilt/posy-*` folders to `~/.icons`
+`cd Prebuilt`
 
-##### Download an arhive
+Copy `posy-*` folders to `~/.icons`
 
-sss
+##### Download
+
+Download this [archive](https://git.auteiy.me/dmitry/cursorsPosy/-/archive/master/cursorsPosy-master.tar.gz?path=Prebuilt)
+
+Extract it
+
+`cd cursorsPosy-master-Prebuilt/Prebuilt`
+
+Copy `posy-*` folders to `~/.icons`
+
+
+
+
+
 
 ---
 
