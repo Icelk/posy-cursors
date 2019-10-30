@@ -12,11 +12,8 @@
 9081237383d90e509aa00f00170e968f dnd-move
 9d800788f1b08800ae810202380a0822 pointer
 a2a266d0498c3104214a47bd64ab0fc8 alias
-b66166c04f8c3109214a4fbd64a50fc8 copy
-d9ce0ab605698f320427677b458ad60b help
-e29285e634086352946a0e7090d73106 pointer
-fcf21c00b30f7e3f83fe0dfd12e71cff dnd-move
 arrow default
+b66166c04f8c3109214a4fbd64a50fc8 copy
 circle not-allowed
 closedhand dnd-move
 col-resize size_hor
@@ -24,9 +21,12 @@ color-picker crosshair
 copy dnd-move
 cross crosshair
 crossed_circle not-allowed
+d9ce0ab605698f320427677b458ad60b help
 dnd-copy copy
 dnd-none dnd-move
 e-resize size_hor
+e29285e634086352946a0e7090d73106 pointer
+fcf21c00b30f7e3f83fe0dfd12e71cff dnd-move
 forbidden no-drop
 grab openhand
 grabbing dnd-move
@@ -56,6 +56,7 @@ sb_v_double_arrow size_ver
 size_all fleur
 split_h col-resize
 split_v row-resize
+tcross crosshair
 ul_angle top_left_corner
 ur_angle top_right_corner
 v_double_arrow size_ver
