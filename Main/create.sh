@@ -1,5 +1,15 @@
 #!/bin/bash
 
+if ! [ -x "$(command -v xcursorgen)" ]; then
+  echo 'Error: xcursorgen is not installed.' >&2
+  exit 1
+fi
+
+if ! [ -x "$(command -v convert)" ]; then
+  echo 'Error: imagemagick is not installed.' >&2
+  exit 1
+fi
+
 source progressBars.sh
 source buildFunctions.sh
 
