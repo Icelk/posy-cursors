@@ -21,9 +21,22 @@ https://github.com/keeferrourke/capitaine-cursors
 
 ### Manual
 
-Run `bash create.sh`
+##### Build 
 
-Copy `posy-*` folders to `~/.icons`
+You'll need:
+
+`imagemagick` for converting images to different sizes
+
+`xcursorgen` for creating **Xcursor** files 
+
+
+Run `bash Main/create.sh`
+
+Copy `Prebuilt/posy-*` folders to `~/.icons`
+
+##### Download an arhive
+
+sss
 
 ---
 
