@@ -64,7 +64,7 @@ package-aur:
     #   else
     #     echo "Not making git source package, it has not changed"
     #   fi
-    # - cd ..
+    - cd ..
 
     # Set up SSH for publishing
     - mkdir -p /root/.ssh
