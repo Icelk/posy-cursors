@@ -5,6 +5,9 @@
 # - export a build artifact from the new job
 # - manually upload artifact to GitHub in the 'github-release' job
 
+stages:
+  - package
+
 # AUR packages release
 package-aur:
   image: archlinux/base
