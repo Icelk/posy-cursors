@@ -69,7 +69,7 @@ package-aur:
     # Set up SSH for publishing
     - mkdir -p /root/.ssh
     - cp ./aur.pub /root/.ssh/id_rsa.pub
-    - cat "$AUR_SSH_PRIVATE" | base64 -d > /root/.ssh/id_rsa
+    - echo "$AUR_SSH_PRIVATE" | base64 -d > /root/.ssh/id_rsa
     - echo "Host aur.archlinux.org" >> /root/.ssh/config
     - echo "  IdentityFile /root/.ssh/aur" >> /root/.ssh/config
     - echo "  User aur" >> /root/.ssh/config
