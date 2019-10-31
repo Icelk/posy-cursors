@@ -5,5 +5,17 @@
 # - export a build artifact from the new job
 # - manually upload artifact to GitHub in the 'github-release' job
 
-script:
+stages:
+  - package
+
+# AUR packages release
+package-aur:
+  image: archlinux/base
+  stage: package
+  # needs:
+  #   - release-github
+  dependencies: []
+  before_script: []
+  script:
+    - echo "$AUR_SSH_PRIVATE"
     - echo "$TEST"
