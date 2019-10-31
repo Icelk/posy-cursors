@@ -15,8 +15,8 @@ package-aur:
   # needs:
   #   - release-github
   dependencies: []
-  # only:
-  #   - /^v(\d+\.)*\d+$/
+  only:
+    - /^v(\d+\.)*\d+$/
   before_script: []
   script:
     - cd ./pkg/aur
