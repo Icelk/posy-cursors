@@ -27,7 +27,7 @@ package-aur:
 
     # Determine remote URLs and SHA checksums
     - echo "Determining SHA checksums for remote files..."
-    - URL_SOURCE=https://git.auteiy.me/dmitry/cursorsPosy/-/archive/v$VERSION/cursorsPosy-v$VERSION.tar.gz
+    - URL_SOURCE=https://git.auteiy.me/dmitry/cursorsPosy/-/archive/v$VERSION/cursorsPosy-v$VERSION.tar.gz?path=themes
     - 'echo "Selected source URL: $URL_SOURCE"'
     - echo "Determining sha256sum for remote source..."
     - 'SHA_SOURCE=$(curl -sSL "$URL_SOURCE" | sha256sum | cut -d" " -f1)'
