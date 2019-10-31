@@ -27,7 +27,7 @@ package-aur:
 
     # Determine remote URLs and SHA checksums
     - echo "Determining SHA checksums for remote files..."
-    - URL_SOURCE=https://git.auteiy.me/dmitry/cursorsPosy/-/archive/v$VERSION/ffsend-v$VERSION.tar.gz
+    - URL_SOURCE=https://git.auteiy.me/dmitry/cursorsPosy/-/archive/v$VERSION/cursorsPosy-v$VERSION.tar.gz
     - 'echo "Selected source URL: $URL_SOURCE"'
     - echo "Determining sha256sum for remote source..."
     - 'SHA_SOURCE=$(curl -sSL "$URL_SOURCE" | sha256sum | cut -d" " -f1)'
@@ -36,7 +36,7 @@ package-aur:
     # Update PKGBUILD parameters: version, source URL and SHA sum
     - echo "Updating PKGBUILDS with release information..."
     - sed "s/^pkgver=.*\$/pkgver=$VERSION/" -i posy-cursors/PKGBUILD
-    - sed "s/^source=(\"\(.*\)::.*\").*\$/source=(\"\1::$(echo $URL_SOURCE | sed 's/\//\\\//g')\")/" -i ffsend/PKGBUILD
+    - sed "s/^source=(\"\(.*\)::.*\").*\$/source=(\"\1::$(echo $URL_SOURCE | sed 's/\//\\\//g')\")/" -i posy-cursors/PKGBUILD
     - sed "s/^sha256sums=.*\$/sha256sums=('$SHA_SOURCE')/" -i posy-cursors/PKGBUILD
 
     # Get SHA hash for local and remote file w/o version, update if it has changed
