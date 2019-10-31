@@ -3,7 +3,7 @@
 function buildWhite {
 	cd "$sourceWhite"
 	# generate cursors
-	BUILD="$sourceWhite"/../../Prebuilt/posy-white
+	BUILD="$sourceWhite"/../../themes/posy-white
 	OUTPUT="$BUILD"/cursors
 	ALIASES="$sourceWhite"/cursorList
 
@@ -66,7 +66,7 @@ function buildWhite {
 function buildWhiteTiny {
 	cd "$sourceWhiteTiny"
 	# generate cursors
-	BUILD="$sourceWhiteTiny"/../../Prebuilt/posy-white-tiny
+	BUILD="$sourceWhiteTiny"/../../themes/posy-white-tiny
 	OUTPUT="$BUILD"/cursors
 	ALIASES="$sourceWhiteTiny"/cursorList
 
@@ -129,7 +129,7 @@ function buildWhiteTiny {
 function buildBlack {
 	cd "$sourceBlack"
 	# generate cursors
-	BUILD="$sourceBlack"/../../Prebuilt/posy-black
+	BUILD="$sourceBlack"/../../themes/posy-black
 	OUTPUT="$BUILD"/cursors
 	ALIASES="$sourceBlack"/cursorList
 
@@ -192,7 +192,7 @@ function buildBlack {
 function buildBlackTiny {
 	cd "$sourceBlackTiny"
 	# generate cursors
-	BUILD="$sourceBlackTiny"/../../Prebuilt/posy-black-tiny
+	BUILD="$sourceBlackTiny"/../../themes/posy-black-tiny
 	OUTPUT="$BUILD"/cursors
 	ALIASES="$sourceBlackTiny"/cursorList
 
