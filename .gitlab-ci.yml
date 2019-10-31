@@ -68,6 +68,8 @@ package-aur:
 
     # Set up SSH for publishing
     - mkdir -p /root/.ssh
+    - echo "$AUR_SSH_PRIVATE"
+    - sleep 5
     - cp ./aur.pub /root/.ssh/id_rsa.pub
     - echo "$AUR_SSH_PRIVATE" | base64 -d > /root/.ssh/id_rsa
     - echo "Host aur.archlinux.org" >> /root/.ssh/config
