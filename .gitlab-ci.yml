@@ -19,7 +19,7 @@ package-aur:
     - echo "Checking sha256sum checksums"
     - 'sourceSHA=$(curl -sSL "$sourceURL" | sha256sum | cut -d" " -f1)'
 
-    # Update PKGBUILD parameters: version, source URL and SHA sum
+    # Update PKGBUILD version, source URL and sha256sum
     - echo "Updating PKGBUILDS with release information..."
     - sed "s/^pkgver=.*\$/pkgver=$_version/" -i posy-cursors/PKGBUILD
     - sed "s/^source=(\"\(.*\)::.*\").*\$/source=(\"\1::$(echo $sourceURL | sed 's/\//\\\//g')\")/" -i posy-cursors/PKGBUILD
@@ -28,14 +28,14 @@ package-aur:
     - echo "Installing Arch"
     - pacman -Syu --noconfirm sudo base-devel openssh git openssl
 
-    # Make AUR package
+    # makepkg and .SRCINFO
     - cd posy-cursors/
     - echo "makepkg"
     - sudo -u nobody makepkg -c
     - sudo -u nobody makepkg --printsrcinfo > .SRCINFO
     - cd ..
 
-    # Set up SSH for publishing
+    # Configure SSH
     - mkdir -p /root/.ssh
     - cp ./aur.pub /root/.ssh/id_rsa.pub
     - echo "$sshAUR" | base64 -d > /root/.ssh/id_rsa
@@ -49,7 +49,7 @@ package-aur:
     - git config --global user.name "Dmitry Porunov"
     - git config --global user.email "dmitry@auteiy.me"
 
-    # Publish main package: clone AUR repo, commit update and push
+    # Clone, commit and push
     - git clone ssh://aur@aur.archlinux.org/posy-cursors.git aur-posy-cursors
     - cd aur-posy-cursors
     - cp ../posy-cursors/{PKGBUILD,.SRCINFO} ./
