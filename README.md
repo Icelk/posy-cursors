@@ -30,7 +30,7 @@ You'll need:
 `xcursorgen` for creating **Xcursor** files 
 
 
-Run `bash Main/create.sh`
+Run `bash src/create.sh`
 
 `cd themes`
 
