@@ -42,7 +42,7 @@ Download this [archive](https://git.auteiy.me/dmitry/cursorsPosy/-/archive/maste
 
 Extract it
 
-`cd cursorsPosy-master-Prebuilt/Prebuilt`
+`cd cursorsPosy-master-themes/themes`
 
 Copy `posy-*` folders to `~/.icons`
 
