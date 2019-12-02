@@ -32,13 +32,13 @@ You'll need:
 
 Run `bash Main/create.sh`
 
-`cd Prebuilt`
+`cd themes`
 
 Copy `posy-*` folders to `~/.icons`
 
 ##### Download
 
-Download this [archive](https://git.auteiy.me/dmitry/cursorsPosy/-/archive/master/cursorsPosy-master.tar.gz?path=Prebuilt)
+Download this [archive](https://git.auteiy.me/dmitry/cursorsPosy/-/archive/master/cursorsPosy-master.tar.gz?path=themes)
 
 Extract it
 
