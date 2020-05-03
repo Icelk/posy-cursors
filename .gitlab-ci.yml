@@ -28,7 +28,11 @@ package-aur:
     - echo "Installing Arch"
     - pacman -Syu --noconfirm sudo base-devel openssh git openssl
 
+<<<<<<< HEAD
     # makepkg and .SRCINFO
+=======
+    # Make AUR package
+>>>>>>> cbd402db9b7004778c8b24264ddbba4b97edb24f
     - cd posy-cursors/
     - echo "makepkg"
     - sudo -u nobody makepkg -c
