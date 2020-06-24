@@ -9,7 +9,7 @@ Update-AUR:
   script:
     - cd ./pkg/aur
 
-    - VERSION=$(echo $CI_COMMIT_REF_NAME)
+    - VERSION=$(echo $CI_COMMIT_REF_NAME | cut -c 2-)
     - echo "$CI_COMMIT_REF_NAME"
     - echo "Pushing'v$VERSION'"
 
