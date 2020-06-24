@@ -4,10 +4,8 @@ stages:
 Update-AUR:
   image: archlinux/base
   stage: package
-  dependencies: []
   only:
     - /^v(\d+\.)*\d+$/
-  before_script: []
   script:
     - cd ./pkg/aur
 

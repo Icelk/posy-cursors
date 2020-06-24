@@ -12,7 +12,7 @@ source=("$pkgname-$pkgver.tar.gz::$url/-/archive/v$pkgver/posy-cursors-v$pkgver.
 sha256sums=('SKIP') # automatically set in CI, see: /.gitlab-ci.yml
 
 package() {
-  cd posy-cursors-v$pkgver-themes/themes
+  cd posy-cursors-v$pkgver/themes
   install -Ddm755 "$pkgdir/usr/share/icons"
   cp -dr --no-preserve=ownership posy-white/ "$pkgdir/usr/share/icons/posy-white"
   cp -dr --no-preserve=ownership posy-black/ "$pkgdir/usr/share/icons/posy-black"
