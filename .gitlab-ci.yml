@@ -9,7 +9,8 @@ Update-AUR:
   script:
     - cd ./pkg/aur
 
-    - _version=$(echo $CI_COMMIT_REF_NAME | cut -c 2-)
+    - _version=$(echo $CI_COMMIT_TAG)
+    - echo "$CI_COMMIT_TAG"
     - echo "Pushing'v$_version'"
 
     - sourceURL=https://gitlab.com/ykkzde/posy-cursors/-/archive/v$_version/cursorsPosy-v$_version.tar.gz?path=themes
