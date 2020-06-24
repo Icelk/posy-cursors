@@ -10,24 +10,15 @@ Update-AUR:
     - cd ./pkg/aur
 
     - VERSION=$(echo $CI_COMMIT_REF_NAME | cut -c 2-)
-    - echo "$CI_COMMIT_REF_NAME"
-    - echo "Pushing'v$VERSION'"
 
-    - sourceURL=https://gitlab.com/ykkzde/posy-cursors/-/archive/v$VERSION/cursorsPosy-v$VERSION.tar.gz?path=themes
-    - 'echo "Source: $sourceURL"'
-    - echo "Checking sha256sum checksums"
-    - 'sourceSHA=$(curl -sSL "$sourceURL" | sha256sum | cut -d" " -f1)'
-
-    # Update PKGBUILD version, source URL and sha256sum
+    # Update pkgver in PKBUILD
     - echo "Updating PKGBUILDS with release information..."
     - sed "s/^pkgver=.*\$/pkgver=$VERSION/" -i posy-cursors/PKGBUILD
-    - sed "s/^source=(\"\(.*\)::.*\").*\$/source=(\"\1::$(echo $sourceURL | sed 's/\//\\\//g')\")/" -i posy-cursors/PKGBUILD
-    - sed "s/^sha256sums=.*\$/sha256sums=('$sourceSHA')/" -i posy-cursors/PKGBUILD
 
     - echo "Installing Arch"
     - pacman -Syu --noconfirm sudo base-devel openssh git openssl
 
-    # Makepkg and .SRCINFO
+    # Build and update .SRCINFO
     - cd posy-cursors/
     - echo "makepkg"
     - sudo -u nobody makepkg -c
