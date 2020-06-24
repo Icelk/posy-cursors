@@ -1,9 +1,3 @@
-## Preview
-
-![Preview](https://cloud.synh.me/s/y9CDmiCkPrk5NAT/preview)
-
-
-### Original
 http://www.michieldb.nl/other/cursors/
 
 ##### Build script from here
@@ -38,11 +32,11 @@ Copy `posy-*` folders to `~/.icons`
 
 ##### Download
 
-Download this [archive](https://git.auteiy.me/dmitry/cursorsPosy/-/archive/master/cursorsPosy-master.tar.gz?path=themes)
+Download this [archive](https://gitlab.com/ykkzde/posy-cursors/-/archive/master/posy-cursors-master.tar.gz?path=themes)
 
 Extract it
 
-`cd cursorsPosy-master-themes/themes`
+`cd posy-cursors-master-themes/themes`
 
 Copy `posy-*` folders to `~/.icons`
 

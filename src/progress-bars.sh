@@ -15,7 +15,7 @@ BLUE="\033[0;34m"
 PURPLE="\033[0;35m"
 COLORLESS="\033[0m"
 
-function ProgressBar_RED {
+function progress-bar-RED {
 # Process data
     let _progress_R=(${1}*100/${2}*100)/100
     let _done_R=(${_progress_R}*4)/10
@@ -30,7 +30,7 @@ function ProgressBar_RED {
 printf "\rProgress : [${RED}${_fill_R// /\#}${COLORLESS}${_empty_R// /-}] ${_progress_R}%%"
 }
 
-function ProgressBar_ORANGE {
+function progress-bar-ORANGE {
 # Process data
     let _progress_O=(${1}*100/${2}*100)/100
     let _done_O=(${_progress_O}*4)/10
@@ -45,7 +45,7 @@ function ProgressBar_ORANGE {
 printf "\rProgress : [${ORANGE}${_fill_O// /\#}${COLORLESS}${_empty_O// /-}] ${_progress_O}%%"
 }
 
-function ProgressBar_YELLOW {
+function progress-bar-YELLOW {
 # Process data
     let _progress_Y=(${1}*100/${2}*100)/100
     let _done_Y=(${_progress_Y}*4)/10
@@ -60,7 +60,7 @@ function ProgressBar_YELLOW {
 printf "\rProgress : [${YELLOW}${_fill_Y// /\#}${COLORLESS}${_empty_Y// /-}] ${_progress_Y}%%"
 }
 
-function ProgressBar_GREEN {
+function progress-bar-GREEN {
 # Process data
     let _progress_G=(${1}*100/${2}*100)/100
     let _done_G=(${_progress_G}*4)/10
@@ -75,7 +75,7 @@ function ProgressBar_GREEN {
 printf "\rProgress : [${GREEN}${_fill_G// /\#}${COLORLESS}${_empty_G// /-}] ${_progress_G}%%"
 }
 
-function ProgressBar_BLUE {
+function progress-bar-BLUE {
 # Process data
     let _progress_B=(${1}*100/${2}*100)/100
     let _done_B=(${_progress_B}*4)/10
@@ -90,7 +90,7 @@ function ProgressBar_BLUE {
 printf "\rProgress : [${BLUE}${_fill_B// /\#}${COLORLESS}${_empty_B// /-}] ${_progress_B}%%"
 }
 
-function ProgressBar_PURPLE {
+function progress-bar-PURPLE {
 # Process data
     let _progress_P=(${1}*100/${2}*100)/100
     let _done_P=(${_progress_P}*4)/10

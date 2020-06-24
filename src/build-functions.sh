@@ -1,11 +1,11 @@
 #!/bin/bash
 
-function buildWhite {
-	cd "$sourceWhite"
+function build-white {
+	cd "$source-white"
 	# generate cursors
-	BUILD="$sourceWhite"/../../themes/posy-white
+	BUILD="$source-white"/../../themes/posy-white
 	OUTPUT="$BUILD"/cursors
-	ALIASES="$sourceWhite"/cursorList
+	ALIASES="$source-white"/cursor-List
 
 	if [ ! -d "$BUILD" ]; then
 		mkdir "$BUILD"
@@ -14,11 +14,11 @@ function buildWhite {
 		mkdir "$OUTPUT"
 	
 	fi
-    rm -rf "$sourceWhite"/x1*
+    rm -rf "$source-white"/x1*
     
-    mkdir {"$sourceWhite"/x1,$sourceWhite/x1_25,$sourceWhite/x1_5}
+    mkdir {"$source-white"/x1,$source-white/x1_25,$source-white/x1_5}
 	
-	cd "$sourceWhite"/x2
+	cd "$source-white"/x2
     
     _STARTW=1
 	
@@ -32,7 +32,7 @@ function buildWhite {
         ProgressBar_RED ${_STARTW} ${_END}
     done
 
-	cd "$sourceWhite"
+	cd "$source-white"
 	for CUR in config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
@@ -59,16 +59,16 @@ function buildWhite {
 	INDEX="$OUTPUT/../index.theme"
 	if [ ! -e "$OUTPUT/../$INDEX" ]; then
 		touch "$INDEX"
-		echo -e "[Icon Theme]\nName=$themeWhite\n" > "$INDEX"
+		echo -e "[Icon Theme]\nName=$theme-white\n" > "$INDEX"
 	fi
 }
 
-function buildWhiteTiny {
-	cd "$sourceWhiteTiny"
+function build-white-tiny {
+	cd "$source-white-tiny"
 	# generate cursors
-	BUILD="$sourceWhiteTiny"/../../themes/posy-white-tiny
+	BUILD="$source-white-tiny"/../../themes/posy-white-tiny
 	OUTPUT="$BUILD"/cursors
-	ALIASES="$sourceWhiteTiny"/cursorList
+	ALIASES="$source-white-tiny"/cursor-List
 
 	if [ ! -d "$BUILD" ]; then
 		mkdir "$BUILD"
@@ -77,11 +77,11 @@ function buildWhiteTiny {
 		mkdir "$OUTPUT"
 	
 	fi
-    rm -rf "$sourceWhiteTiny"/x1*
+    rm -rf "$source-white-tiny"/x1*
     
-    mkdir {"$sourceWhiteTiny"/x1,$sourceWhiteTiny/x1_25,$sourceWhiteTiny/x1_5}
+    mkdir {"$source-white-tiny"/x1,$source-white-tiny/x1_25,$source-white-tiny/x1_5}
 	
-	cd "$sourceWhiteTiny"/x2
+	cd "$source-white-tiny"/x2
     
     _STARTWT=197
 	
@@ -95,7 +95,7 @@ function buildWhiteTiny {
         ProgressBar_ORANGE ${_STARTWT} ${_END}
     done
 
-	cd "$sourceWhiteTiny"
+	cd "$source-white-tiny"
 	for CUR in config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
@@ -122,16 +122,16 @@ function buildWhiteTiny {
 	INDEX="$OUTPUT/../index.theme"
 	if [ ! -e "$OUTPUT/../$INDEX" ]; then
 		touch "$INDEX"
-		echo -e "[Icon Theme]\nName=$themeWhiteTiny\n" > "$INDEX"
+		echo -e "[Icon Theme]\nName=$theme-white-tiny\n" > "$INDEX"
 	fi
 }
 
-function buildBlack {
-	cd "$sourceBlack"
+function build-black {
+	cd "$source-black"
 	# generate cursors
-	BUILD="$sourceBlack"/../../themes/posy-black
+	BUILD="$source-black"/../../themes/posy-black
 	OUTPUT="$BUILD"/cursors
-	ALIASES="$sourceBlack"/cursorList
+	ALIASES="$source-black"/cursor-List
 
 	if [ ! -d "$BUILD" ]; then
 		mkdir "$BUILD"
@@ -140,11 +140,11 @@ function buildBlack {
 		mkdir "$OUTPUT"
 	
 	fi
-    rm -rf "$sourceBlack"/x1*
+    rm -rf "$source-black"/x1*
     
-    mkdir {"$sourceBlack"/x1,$sourceBlack/x1_25,$sourceBlack/x1_5}
+    mkdir {"$source-black"/x1,$source-black/x1_25,$source-black/x1_5}
 	
-	cd "$sourceBlack"/x2
+	cd "$source-black"/x2
     
     _STARTB=394
 	
@@ -158,7 +158,7 @@ function buildBlack {
         ProgressBar_YELLOW ${_STARTB} ${_END}
     done
 
-	cd "$sourceBlack"
+	cd "$source-black"
 	for CUR in config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
@@ -185,16 +185,16 @@ function buildBlack {
 	INDEX="$OUTPUT/../index.theme"
 	if [ ! -e "$OUTPUT/../$INDEX" ]; then
 		touch "$INDEX"
-		echo -e "[Icon Theme]\nName=$themeBlack\n" > "$INDEX"
+		echo -e "[Icon Theme]\nName=$theme-black\n" > "$INDEX"
 	fi
 }
 
-function buildBlackTiny {
-	cd "$sourceBlackTiny"
+function build-black-tiny {
+	cd "$source-black-tiny"
 	# generate cursors
-	BUILD="$sourceBlackTiny"/../../themes/posy-black-tiny
+	BUILD="$source-black-tiny"/../../themes/posy-black-tiny
 	OUTPUT="$BUILD"/cursors
-	ALIASES="$sourceBlackTiny"/cursorList
+	ALIASES="$source-black-tiny"/cursor-List
 
 	if [ ! -d "$BUILD" ]; then
 		mkdir "$BUILD"
@@ -203,11 +203,11 @@ function buildBlackTiny {
 		mkdir "$OUTPUT"
 	
 	fi
-    rm -rf "$sourceBlackTiny"/x1*
+    rm -rf "$source-black-tiny"/x1*
     
-    mkdir {"$sourceBlackTiny"/x1,$sourceBlackTiny/x1_25,$sourceBlackTiny/x1_5}
+    mkdir {"$source-black-tiny"/x1,$source-black-tiny/x1_25,$source-black-tiny/x1_5}
 	
-	cd "$sourceBlackTiny"/x2
+	cd "$source-black-tiny"/x2
     
     _STARTBT=591
 	
@@ -221,7 +221,7 @@ function buildBlackTiny {
         ProgressBar_GREEN ${_STARTBT} ${_END}
     done
 
-	cd "$sourceBlackTiny"
+	cd "$source-black-tiny"
 	for CUR in config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
@@ -248,6 +248,6 @@ function buildBlackTiny {
 	INDEX="$OUTPUT/../index.theme"
 	if [ ! -e "$OUTPUT/../$INDEX" ]; then
 		touch "$INDEX"
-		echo -e "[Icon Theme]\nName=$themeBlackTiny\n" > "$INDEX"
+		echo -e "[Icon Theme]\nName=$theme-black-tiny\n" > "$INDEX"
 	fi
 }

@@ -1,7 +1,7 @@
 stages:
   - package
 
-package-aur:
+Update-AUR:
   image: archlinux/base
   stage: package
   dependencies: []
@@ -14,7 +14,7 @@ package-aur:
     - _version=$(echo $CI_COMMIT_REF_NAME | cut -c 2-)
     - echo "Pushing'v$_version'"
 
-    - sourceURL=https://git.auteiy.me/dmitry/cursorsPosy/-/archive/v$_version/cursorsPosy-v$_version.tar.gz?path=themes
+    - sourceURL=https://gitlab.com/ykkzde/posy-cursors/-/archive/v$_version/cursorsPosy-v$_version.tar.gz?path=themes
     - 'echo "Source: $sourceURL"'
     - echo "Checking sha256sum checksums"
     - 'sourceSHA=$(curl -sSL "$sourceURL" | sha256sum | cut -d" " -f1)'
@@ -38,16 +38,16 @@ package-aur:
     # Configure SSH
     - mkdir -p /root/.ssh
     - cp ./aur.pub /root/.ssh/id_rsa.pub
-    - echo "$sshAUR" | base64 -d > /root/.ssh/id_rsa
+    - echo "${AUR_PRIVATE}" | base64 -d > /root/.ssh/id_rsa
     - echo "Host aur.archlinux.org" >> /root/.ssh/config
     - echo "  IdentityFile /root/.ssh/aur" >> /root/.ssh/config
     - echo "  User aur" >> /root/.ssh/config
-    - chmod 600 /root/.ssh/{id_rsa*,config}
+    - chmod 600 /root/.ssh/{id_rsa*,config} 
     - eval `ssh-agent -s`
-    - echo -en "${sshPASSPHRASE}" | ssh-add /root/.ssh/id_rsa
+    - echo -en "${SSH_PASSPHRASE}" | ssh-add /root/.ssh/id_rsa
     - ssh-keyscan -H aur.archlinux.org >> /root/.ssh/known_hosts
     - git config --global user.name "Dmitry Porunov"
-    - git config --global user.email "dmitry@auteiy.me"
+    - git config --global user.email "dmitry@ykkz.de"
 
     # Clone, commit and push
     - git clone ssh://aur@aur.archlinux.org/posy-cursors.git aur-posy-cursors

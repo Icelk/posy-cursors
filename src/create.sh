@@ -10,27 +10,27 @@ if ! [ -x "$(command -v convert)" ]; then
   exit 1
 fi
 
-source progressBars.sh
-source buildFunctions.sh
+source progress-bars.sh
+source build-functions.sh
 
-sourceWhite=$PWD/White
-themeWhite="Posy White"
-dirWhite="White"
+source-white=$PWD/White
+theme-white="Posy White"
+dir-white="White"
 
-sourceBlack=$PWD/Black
-themeBlack="Posy Black"
+source-black=$PWD/Black
+theme-black="Posy Black"
 
-sourceWhiteTiny=$PWD/WhiteTiny
-themeWhiteTiny="Posy White Tiny"
+source-white-tiny=$PWD/white-tiny
+theme-white-tiny="Posy White Tiny"
 
-sourceBlackTiny=$PWD/BlackTiny
-themeBlackTiny="Posy Black Tiny"
+source-black-tiny=$PWD/black-tiny
+theme-black-tiny="Posy Black Tiny"
 
 echo -e "${RED}Gener${COLORLESS}${ORANGE}ating${COLORLESS} ${YELLOW}cur${COLORLESS}${GREEN}sor${COLORLESS} ${BLUE}the${COLORLESS}${PURPLE}mes.${COLORLESS}"
 
-buildWhite
-buildWhiteTiny
-buildBlack
-buildBlackTiny
+build-white
+build-white-tiny
+build-black
+build-black-tiny
 
 echo -e "${RED}\nF${COLORLESS}${ORANGE}I${COLORLESS}${YELLOW}N${COLORLESS}${GREEN}I${COLORLESS}${BLUE}S${COLORLESS}${PURPLE}H${COLORLESS}"
