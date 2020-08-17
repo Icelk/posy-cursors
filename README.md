@@ -1,6 +1,6 @@
 ## Preview
 
-![Preview](https://www.dropbox.com/s/mul36o4usbkdoxd/Preview.png?dl=1)
+![Preview](https://www.dropbox.com/s/mul36o4usbkdoxd/Preview.png?raw=1)
 
 
 ### Original
