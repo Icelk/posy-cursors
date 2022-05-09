@@ -1,3 +1,5 @@
+This is a fork of [garrettmills/archive-posy-cursors](https://code.garrettmills.dev/garrettmills/archive-posy-cursors) which in turn is a fork of [ykkzde/posy-cursors](https://gitlab.com/ykkzde/posy-cursors), which is no longer available.
+
 ## Preview
 
 ![Preview](https://www.dropbox.com/s/mul36o4usbkdoxd/Preview.png?raw=1)
